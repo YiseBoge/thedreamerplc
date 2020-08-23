@@ -13,14 +13,26 @@ Vue.use(Vuetify, {
 
 export default new Vuetify({
   theme: {
-    dark: false,
+    dark: true,
     themes: {
       light: {
-        primary: "#42a5f6",
-        secondary: "#050b1f",
-        accent: "#204165"
+        primary: "#2D5B8D",
+        secondary: "#f5f5f5",
+        accent: "#204165",
+        error: "#E64A19",
+        info: "#2196F3",
+        success: "#C0CA33",
+        warning: "#FBC02D"
       },
-      dark: {}
+      dark: {
+        primary: "#2D5B8D",
+        secondary: "#131313",
+        accent: "#204165",
+        error: "#E64A19",
+        info: "#2196F3",
+        success: "#C0CA33",
+        warning: "#FBC02D"
+      }
     }
   }
 });

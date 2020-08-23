@@ -27,10 +27,14 @@ export default {
   data: () => ({
     features: [
       {
+        color: "primary",
+        dark: true,
         title: "Pixel Perfect Design",
         icon: "mdi-fountain-pen-tip"
       },
       {
+        color: "primary",
+        dark: true,
         title: "Retina Ready",
         icon: "mdi-cellphone"
       },
@@ -41,14 +45,20 @@ export default {
         icon: "mdi-pencil-box-outline"
       },
       {
+        color: "primary",
+        dark: true,
         title: "Image Parallax",
         icon: "mdi-image-size-select-actual"
       },
       {
+        color: "primary",
+        dark: true,
         title: "Seo Optimized",
         icon: "mdi-ice-pop"
       },
       {
+        color: "primary",
+        dark: true,
         title: "24/7 Support",
         icon: "mdi-help-circle-outline"
       }

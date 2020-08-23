@@ -10,7 +10,7 @@
             sm="4"
             md="3"
           >
-            <base-info-card align="center" dark v-bind="card" />
+            <base-info-card align="center" v-bind="card" />
           </v-col>
         </v-row>
       </v-container>

@@ -1,7 +1,6 @@
 <template>
   <v-navigation-drawer
     bottom
-    color="transparent"
     fixed
     height="auto"
     overlay-color="secondary"
@@ -10,13 +9,12 @@
     v-bind="$attrs"
     v-on="$listeners"
   >
-    <v-list color="white" shaped>
+    <v-list :dark="$vuetify.theme.dark" shaped>
       <v-list-item
         v-for="name in items"
         :key="name"
         :to="{ name }"
         :exact="name === 'Home'"
-        color="primary"
       >
         <v-list-item-content>
           <v-list-item-title v-text="name" />

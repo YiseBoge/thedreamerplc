@@ -1,6 +1,6 @@
 <template>
-  <v-theme-provider dark>
-    <base-section id="info-alt" class="grey darken-4">
+  <v-theme-provider :dark="$vuetify.theme.dark">
+    <base-section id="info-alt">
       <v-responsive class="mx-auto" max-width="1400">
         <v-container fluid>
           <v-row>
