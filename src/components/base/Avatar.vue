@@ -1,8 +1,8 @@
 <template>
-  <div :class="classes" class="base-avatar d-inline-flex">
+  <div :class="classes" class="base-avatar d-inline-flex transparent">
     <v-avatar
       v-if="outlined"
-      :color="color || 'grey lighten-3'"
+      :color="color || 'secondary lighten-3'"
       :size="outlineSize"
       :style="styles"
       class="base-avatar__outline"
@@ -10,7 +10,7 @@
     />
 
     <v-avatar
-      :color="color || 'white'"
+      :color="color || 'secondary'"
       :size="size"
       class="base-avatar__avatar"
       v-bind="$attrs"

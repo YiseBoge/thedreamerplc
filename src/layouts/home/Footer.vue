@@ -1,5 +1,5 @@
 <template>
-  <v-footer id="home-footer" color="grey darken-4" dark min-height="72">
+  <v-footer id="home-footer" :dark="$vuetify.theme.dark" min-height="72">
     <v-container>
       <v-row>
         <v-col cols="12" md="6">
@@ -7,12 +7,7 @@
             class="d-flex flex-wrap justify-md-start justify-center justify-md-none"
           >
             <template v-for="(s, i) in social">
-              <a
-                :key="s"
-                class="white--text pa-1 pa-md-0"
-                href="#"
-                v-text="s"
-              />
+              <a :key="s" class="pa-1 pa-md-0" href="#" v-text="s" />
 
               <v-responsive
                 v-if="i < social.length - 1"

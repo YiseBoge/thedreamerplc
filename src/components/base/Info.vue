@@ -2,9 +2,13 @@
   <v-theme-provider :dark="dark">
     <div>
       <base-img
-        :src="require('@/assets/zero-logo-dark.svg')"
+        :src="
+          require(`@/assets/brand-${
+            $vuetify.theme.dark ? 'dark' : 'light'
+          }.svg`)
+        "
         contain
-        max-width="128"
+        max-width="250"
         min-height="78"
         width="100%"
       />
@@ -12,7 +16,7 @@
       <base-title
         size="body-1"
         space="4"
-        title="MULTI-PURPOSE THEME"
+        title="MULTI-PURPOSE COMPANY"
         weight="regular"
       />
 

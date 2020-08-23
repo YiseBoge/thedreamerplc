@@ -1,6 +1,13 @@
 <template>
   <div>
-    <v-app-bar id="home-app-bar" app color="white" elevation="1" height="80">
+    <v-app-bar
+      outlined
+      id="home-app-bar"
+      app
+      :dark="$vuetify.theme.dark"
+      elevation="1"
+      height="80"
+    >
       <base-img
         :src="require('@/assets/logo.svg')"
         class="mr-3 hidden-xs-only"
@@ -10,16 +17,24 @@
       />
 
       <base-img
-        :src="require('@/assets/zero-logo-light.svg')"
+        :src="
+          require(`@/assets/brand-${
+            $vuetify.theme.dark ? 'dark' : 'light'
+          }.svg`)
+        "
         contain
-        max-width="128"
+        max-width="200"
         width="100%"
       />
 
       <v-spacer />
 
       <div>
-        <v-tabs class="hidden-sm-and-down" optional>
+        <v-tabs
+          class="hidden-sm-and-down"
+          background-color="transparent"
+          optional
+        >
           <v-tab
             v-for="(name, i) in items"
             :key="i"
@@ -35,6 +50,12 @@
           </v-tab>
         </v-tabs>
       </div>
+
+      <v-switch
+        v-model="$vuetify.theme.dark"
+        class="mx-2 mt-5 font-weight-bold"
+        label="Dark"
+      />
 
       <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer" />
     </v-app-bar>
@@ -53,7 +74,7 @@ export default {
 
   data: () => ({
     drawer: null,
-    items: ["Home", "About", "Contact", "Pro"]
+    items: ["Home", "About", "Contact"]
   })
 };
 </script>
