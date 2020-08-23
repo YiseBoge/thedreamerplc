@@ -74,7 +74,7 @@ export default {
 
   data: () => ({
     drawer: null,
-    items: ["Home", "About", "Contact"]
+    items: ["Home", "About", "Contact", "Projects"]
   })
 };
 </script>
